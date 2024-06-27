@@ -16,7 +16,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: url('https://images.pexels.com/photos/5740846/pexels-photo-5740846.jpeg') no-repeat center center fixed;
+      background: url('https://images.pexels.com/photos/129539/pexels-photo-129539.jpeg') no-repeat center center fixed;
       background-size: cover; /* Ensure the background image covers the entire container */
       z-index: -1; /* Ensure the ocean is behind other content */
     }
@@ -37,7 +37,7 @@
     button {
       background-color: rgba(0, 119, 190, 0); /* Fully transparent */
       border: none;
-      color: white;
+      color: white; /* Initial button text color */
       padding: 15px 32px;
       text-align: center;
       text-decoration: none; /* Remove underline */
@@ -52,21 +52,23 @@
       overflow: hidden; /* Hide overflow */
       outline: none; /* Remove outline */
       border: 2px solid transparent; /* Remove border */
-      animation: floatAnimation 3s infinite ease-in-out; /* Animation for the buttons */
+      animation: colorChange 14s infinite; /* Animation for the buttons */
     }
 
-    @keyframes floatAnimation {
-      0%, 50% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+    @keyframes colorChange {
+      0% { color: red; }
+      14.28% { color: orange; }
+      28.57% { color: yellow; }
+      42.85% { color: green; }
+      57.14% { color: blue; }
+      71.42% { color: indigo; }
+      85.71% { color: violet; }
+      100% { color: red; }
     }
 
     button:hover {
       background-color: rgba(0, 119, 190, 0.75); /* 75% transparent blue on hover */
-      color: white;
+      color: white; /* Reset button text color on hover */
       transform: scale(1.05); /* Scale up on hover */
     }
 
@@ -120,6 +122,12 @@
     <a href="https://tiny.cc/cutting-bills-entry">
       <button>Follow Up Sheet</button>
     </a>
+
+    <a href="#">
+      <button>Mail Validator</button>
+    </a>
+
+
 
   </div>
 </body>
