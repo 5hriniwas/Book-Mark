@@ -5,24 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://inrdeals.sgp1.cdn.digitaloceanspaces.com/resources/images/favicon.gif" type="images/gif" sizes="32x32">
   <title>SHREE</title>
+  <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XKLkNGeUCIYXwtrLZ6IWKgqe1EN3eqnlrZBF_fQ4V3sLkB1LOtRrDO9hbVUhGvJeni3LMUyt9bI1D5Up2AqmOw" charset="UTF-8"></script>
   <style>
-    /* CSS for ocean animation */
     body {
-      margin: 0; /* Remove default margin */
-      padding: 0; /* Remove default padding */
-      overflow-x: hidden; /* Hide horizontal overflow */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: black; /* Set background color to black */
     }
 
     .ocean {
       position: fixed;
       width: 100%;
       height: 100%;
-      background: url('https://images.pexels.com/photos/129539/pexels-photo-129539.jpeg') no-repeat center center fixed;
-      background-size: cover; /* Ensure the background image covers the entire container */
-      z-index: -1; /* Ensure the ocean is behind other content */
+      z-index: -1;
     }
 
-    /* CSS for button container */
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
     .button-container {
       position: absolute;
       top: 50%;
@@ -32,28 +36,28 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      z-index: 1; /* Ensure the buttons are above the ocean background */
+      z-index: 1;
     }
 
     button {
-      background-color: rgba(0, 119, 190, 0); /* Fully transparent */
+      background-color: rgba(0, 119, 190, 0);
       border: none;
-      color: white; /* Initial button text color */
+      color: white;
       padding: 15px 32px;
       text-align: center;
-      text-decoration: none; /* Remove underline */
-      display: block; /* Make buttons display as block */
+      text-decoration: none;
+      display: block;
       font-size: 16px;
-      margin: 10px; /* Adjust the margin between buttons */
+      margin: 10px;
       transition-duration: 0.4s;
       cursor: pointer;
       border-radius: 8px;
-      width: 200px; /* Set a fixed width for all buttons */
-      position: relative; /* Add position relative */
-      overflow: hidden; /* Hide overflow */
-      outline: none; /* Remove outline */
-      border: 2px solid transparent; /* Remove border */
-      animation: colorChange 14s infinite; /* Animation for the buttons */
+      width: 200px;
+      position: relative;
+      overflow: hidden;
+      outline: none;
+      border: 2px solid transparent;
+      animation: colorChange 14s infinite;
     }
 
     @keyframes colorChange {
@@ -68,12 +72,11 @@
     }
 
     button:hover {
-      background-color: rgba(0, 119, 190, 0.75); /* 75% transparent blue on hover */
-      color: white; /* Reset button text color on hover */
-      transform: scale(1.05); /* Scale up on hover */
+      background-color: rgba(0, 119, 190, 0.75);
+      color: white;
+      transform: scale(1.05);
     }
 
-    /* New animation */
     button::before {
       content: '';
       position: absolute;
@@ -81,21 +84,24 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+      background-color: rgba(255, 255, 255, 0.2);
       transition: background-color 0.3s ease-in-out;
       z-index: -1;
-      opacity: 0; /* Initially invisible */
+      opacity: 0;
     }
 
     button:hover::before {
-      opacity: 1; /* Make it visible on hover */
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <div class="ocean"></div>
+  <div class="ocean">
+    <video autoplay muted loop>
+      <source src="https://videos.pexels.com/video-files/3999400/3999400-hd_1920_1080_24fps.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="button-container">
-    
     <a href="https://drive.google.com/drive/folders/1xKmDLOglaMTxoryBjGAjIeL6ZhnLAYhD?usp=sharing">
       <button>DELTA</button>
     </a>
@@ -111,10 +117,6 @@
     <a href="https://tiny.cc/cutting-bills-entry">
       <button>Follow Up Sheet</button>
     </a>
-
   </div>
 </body>
 </html>
-
-
-
